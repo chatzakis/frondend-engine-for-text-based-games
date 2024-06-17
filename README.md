@@ -96,6 +96,7 @@ The list of characters is described in the JSON file in the following manner:<br
 
 ## CSS properties
 In the beginning of the **styles.css** file, there is a list of variables to customize the UI of the game (colors, fonts).
+Further changes can be done to the **styles.css** file for a more specific UI.
 
 ## Other changes
 You can change the **name of the game**, the **favicon**, and various messages through the HTML files (index, game). 
