@@ -14,7 +14,8 @@
     /* Fonts */
     --main-text-font: "Caveat", cursive;
     --button-font: "Caveat", cursive;
-    --time-font: "Rubik Wet Paint", system-ui;
+    --time-font: "Sedan SC", serif;
+    --menu-buttons: "Sedan SC", serif;
     --final-message-font: "Sedan SC", serif;
     --main-font-color: var(--light-font);
     /* Assets */
@@ -254,7 +255,7 @@ hr {
 }
 
 #home .menu-btn {
-    font-family: "Rubik Wet Paint", system-ui;
+    font-family: var(--menu-buttons);
     display: block;
     width: 30%;
     margin: 5px auto;
