@@ -1,0 +1,67 @@
+{ "initialNode":0,
+  "soundtrack": "./sound/AdhesiveWombat-Night-Shade.mp3",
+  "pauseTime": 1000,
+  "checkpoint": {"node":1, "time":{ "hours": 12, "minutes": 30 }},
+  "finalNodes":[2,4],
+  "deathNodes":[2],
+  "startingTime":{ "hours": 12, "minutes": 0 },
+  "inventory": [
+    {"name":"key", "possession": false, "nodeAcquired": [0], "nodeJumps": [{"use":3, "target": 5}]}
+],
+  "characters":[
+    {"name": "protagonist", "image": "protagonist.png", "color": "cornflowerBlue" },
+    {"name": "woman", "image": "woman.png", "color": "hotPink" }
+  ],
+  "nodes":[
+    {
+      "id": "0",
+      "text": "Starting Node text",
+      "img":"",
+      "options": [
+        {"id": "1", "text": "Node 0 - Option 1", "target": "1", "feedback":"This option has feedback", "sound":"", "time":"5"},
+        {"id": "2", "text": "Node 0 - Option 2", "target": "3", "feedback":"", "sound":"", "time":"5"}
+      ]
+    },
+    {
+      "id": "1",
+      "text": "Our hero says: <span class='speech protagonist'>'Hello, pretty lady!'</span> and she answers <span class='speech woman'>'Goodmorning, sir!'</span>",
+      "img":"",
+      "options": [
+        {"id": "1", "text": "Node 1 - Option 1", "target": "2", "feedback":"", "sound":"", "time":"5"},
+        {"id": "2", "text": "Node 1 - Option 2", "target": "4", "feedback":"", "sound":"", "time":"5"}
+      ]
+    },
+    {
+      "id": "2",
+      "text": "Node 02 text - Ending 1 - Lose",
+      "img":"",
+      "options": [
+
+      ]
+    },
+    {
+      "id": "3",
+      "text": "Node 02 text",
+      "img":"",
+      "options": [
+        {"id": "1", "text": "Node 3 - Option 1", "target": "4", "feedback":"", "sound":"", "time":"5"}
+      ]
+    },
+    {
+      "id": "4",
+      "text": "Node 02 text - Ending 2 - Win",
+      "img":"",
+      "options": [
+
+      ]
+    },
+    {
+      "id": "5",
+      "text": "Node 05 text - You came here because you have the key item - check bottom right",
+      "img":"",
+      "options": [
+        {"id": "1", "text": "Node 5 - Option 1", "target": "4", "feedback":"", "sound":"", "time":"5"}
+      ]
+    }
+  ]
+}
