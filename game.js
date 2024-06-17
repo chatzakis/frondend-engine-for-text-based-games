@@ -159,17 +159,13 @@ function makeTimeStep(time, timeElapsed) {
     };
 }
 
-function handleTimeInterruptions(index, time){
-    if ((time.hours >= 23 && time.minutes >= 54) || time.hours >= 24){
-        if (index == 32 || index == 33){
-            time.hours = 24;
-            time.minutes = 0;
-        }else{
-            // Go to the time-is-up node
-            index = 34;
-            time.hours = 23;
-            time.minutes = 55;
-        }
+function handleTimeInterruptions(index, time, ENDTIME, TIMEOUT){
+    if ((time.hours >= ENDTIME.hours && time.minutes >= ENDTIME.minutes)){
+        // Go to the time-is-up node
+        index = TIMEOUT;
+        time.hours = ENDTIME.hours;
+        time.minutes = ENDTIME.minutes;
+        
     }
     return [index, time];
 }
@@ -221,6 +217,8 @@ async function main() {
     const CHARACTERS = data.characters;
     const PAUSETIME = data.pauseTime;
     let time = data.startingTime;
+    const ENDTIME = data.endTime;
+    const TIMEOUTNODE = data.timeoutNode;
     let inventory = data.inventory;
     const nodes = data.nodes;
     
@@ -268,7 +266,7 @@ async function main() {
 
         const currentIndex = nodeIndex;
         nodeIndex = parseInt(currentOption.target);
-        const timeResults = handleTimeInterruptions(nodeIndex, time);
+        const timeResults = handleTimeInterruptions(nodeIndex, time, ENDTIME, TIMEOUTNODE);
         nodeIndex = timeResults[0];
         time = timeResults[1];
         nodeIndex = handleInventoryInterruptions(inventory, nodeIndex);
