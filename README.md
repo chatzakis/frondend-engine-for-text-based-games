@@ -111,6 +111,6 @@ chrome.exe C:\Users\myUser\path-to-game\index.html --disable-web-security --disa
 ### main.py
 main.py is an early cmd version of the engine built with Python.
 
-### Have fun!
-Remember to have fun and share your games with me! 
+## Have fun!
+Remember to **have fun** and **share** your games with the world! 
   
