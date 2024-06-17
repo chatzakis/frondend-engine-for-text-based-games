@@ -10,10 +10,10 @@ Those nodes are described in the file **node.json**. Each node contains text des
 The player begins from an initial node - state of the game and progresses through their choices to different final states (winning or losing).
 
 ## Nodes
-All nodes are described in the 'nodes' property of the JSON file. Each node has an id property which sets it apart from the other nodes. 
-The nodes must be in arithmetic order in the JSON file. The text property includes the content of the node - the state of the story. The image property sets a custom background for the current node. 
+All nodes are described in the **'nodes'** property of the JSON file. Each node has an **id** property which sets it apart from the other nodes. 
+The nodes must be in arithmetic order in the JSON file. The **text** property includes the content of the node - the state of the story. The **image** property sets a custom background for the current node. 
 The option property describes all the options available from this node.
-At the beginning of the JSON file the starting node, the losing and final nodes must be described as shown below: <br>
+At the beginning of the JSON file the **starting** node, the **losing** and **final nodes** must be described as shown below: <br>
 ```html
 "initialNode":0,
 "finalNodes":[2,4],
@@ -37,12 +37,12 @@ Example:<br>
 ```
 ## Options
 Each node has 1 or more options excluding the final ones. Each option has the following: <br>
-An id property.<br>
-A text property that describes the action.<br>
-A target property is the node that the player will be transferred to if they make that choice.<br>
-A feedback property is a message printed when a player clicks an option<br>
-A sound property that describes the sound effect played when this option is clicked.<br>
-A time property that describes the average time that this option takes in-game time.<br>
+An **id** property.<br>
+A **text** property that describes the action.<br>
+A **target** property is the node that the player will be transferred to if they make that choice.<br>
+A **feedback** property is a message printed when a player clicks an option<br>
+A **sound** property that describes the sound effect played when this option is clicked.<br>
+A **time** property that describes the average time that this option takes in-game time.<br>
 ```html
 "options": [
         {"id": "1", "text": "Node 0 - Option 1", "target": "1", "feedback":"This option has feedback", "sound":"", "time":"5"},
@@ -95,7 +95,11 @@ The list of characters is described in the JSON file in the following manner:<br
 'pauseTime' is the time between node transitions. Makes the game more dramatic and allows sound effects to be played properly.
 
 ## CSS properties
-In the beginning of the styles.css file, there is a list of variables to customize the UI of the game (colors, fonts).
+In the beginning of the **styles.css** file, there is a list of variables to customize the UI of the game (colors, fonts).
+
+## Other changes
+You can change the **name of the game**, the **favicon**, and various messages through the HTML files (index, game). 
+You can add the names of all those involved in production in the credits file.
 
 ## Running locally
 In case you want to develop your game locally on your computer use the following command to run Chrome to bypass the CORS policy.
