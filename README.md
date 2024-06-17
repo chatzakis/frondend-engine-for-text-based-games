@@ -103,6 +103,8 @@ In case you want to develop your game locally on your computer use the following
 cd C:\Program Files\Google\Chrome\Application
 chrome.exe C:\Users\myUser\path-to-game\index.html --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp
 ```
+### main.py
+main.py is an early cmd version of the engine built with Python.
 
 ### Have fun!
 Remember to have fun and share your games with me! 
