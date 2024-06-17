@@ -18,7 +18,7 @@ function playAudio(source, element, event) {
 }
 
 $(document).ready(() => {
-    playAudio('./sound/AdhesiveWombat-Night-Shade.mp3','body', 'click');
+    // playAudio('./sound/AdhesiveWombat-Night-Shade.mp3','body', 'click');
     playAudio('./sound/button-hover.wav','.menu-btn', 'mouseover');
     playAudio('./sound/game-start.wav','.play-btn', 'click');
     $(".play-btn").one("click", async function () {
