@@ -5,6 +5,8 @@
   "finalNodes":[2,4],
   "deathNodes":[2],
   "startingTime":{ "hours": 12, "minutes": 0 },
+  "endTime":{ "hours": 21, "minutes": 30 },
+  "timeoutNode": 2,
   "inventory": [
     {"name":"key", "possession": false, "nodeAcquired": [0], "nodeJumps": [{"use":3, "target": 5}]}
 ],
