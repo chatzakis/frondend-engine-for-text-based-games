@@ -110,7 +110,18 @@ function handleDialog(CHARACTERS, text){
 function handleBackground(img){
     if (img.length !== 0){
         const imageUrl = '../backgrounds/' + img;
-        $("body").css('--background-image', `url(${imageUrl})`)
+        $("body").css('--background-image', `url(${imageUrl})`);
+    }else{
+        $("body").css('--background-image', "url('../images/bg.jpg')");
+    }
+}
+
+function handleNarration(narration){
+    $("audio.narration").attr("src", `./sound/narration/${narration}`);
+    if (narration.length == 0){
+        $(".narration-hint").hide();
+    }else{
+        $(".narration-hint").show();
     }
 }
 
@@ -138,6 +149,7 @@ function printOptions(node) {
             }
         });
     });
+    playAudio('./sound/button-hover.wav','.opt-btn','mouseover');
 }
 
 function getAnswerForOptions() {
@@ -250,7 +262,8 @@ async function main() {
         $('.node-text').append(`<p>${currentNode.text}</p>`);
         handleDialogHover(CHARACTERS);
         handleDialog(CHARACTERS, currentNode.text);
-        // handleBackground(currentNode.img);
+        handleBackground(currentNode.img);
+        handleNarration(currentNode.narration)
 
         $(".option-btns").empty();
 
@@ -265,9 +278,7 @@ async function main() {
         }
 
         printOptions(currentNode);
-        $("audio.narration").attr("src", `./sound/narration/${currentNode.narration}`);
-        playAudio('./sound/button-hover.wav','.opt-btn','mouseover');
-
+       
         const answer = await getAnswerForOptions();
         const currentOption = currentNode.options.find(opt => opt.id == answer)
         $('.feedback-text').text(`${currentOption.feedback}`);
@@ -286,7 +297,6 @@ async function main() {
 
         turns++;
     }
-
 }
 
 $(document).ready(() => {
