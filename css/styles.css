@@ -29,7 +29,7 @@ body {
     color: var(--main-font-color);
     font-size: 1.4rem;
     background-color: var(--secontary);
-    --background-image: url("../images/bg.jpg");
+    --background-image: url("../backgrounds/bg.jpg");
 }
 
 body::before {
