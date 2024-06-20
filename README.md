@@ -14,7 +14,7 @@ All nodes are described in the **'nodes'** property of the JSON file. Each node 
 The nodes must be in arithmetic order in the JSON file. 
 The **text** property includes the content of the node - the state of the story. It can include HTML code for better readability and functionality.
 The **narration** property sets an audio narration for the current node. The narration is played when the player clicks on the text. 
-The **image** property sets a custom background for the current node. 
+The **image** property sets a custom background for the current node. Otherwise the **defaultBackground** will be loaded. 
 The **options** property describes all the options available from this node.
 At the beginning of the JSON file the **starting** node, the **losing** and **final nodes** must be described as shown below: <br>
 ```html
@@ -92,9 +92,11 @@ The list of characters is described in the JSON file in the following manner:<br
   ## Other JSON parameters
   ```html
   "soundtrack": "./sound/AdhesiveWombat-Night-Shade.mp3",
+  "defaultBackground": "bg.jpg",
   "pauseTime": 1000
 ```
 'soundtrack' is the soundtrack of the game 
+'defaultBackground' is the default background of the game nodes located in the 'backgrounds' folder.
 'pauseTime' is the time between node transitions. Makes the game more dramatic and allows sound effects to be played properly.
 
 ## CSS properties
@@ -113,6 +115,9 @@ chrome.exe C:\Users\myUser\path-to-game\index.html --disable-web-security --disa
 ```
 ### main.py
 main.py is an early cmd version of the engine built with Python.
+
+### Soundtrack
+You can find the soundtrack used for this demo here: [AdhesiveWombat - Night Shade](https://www.youtube.com/watch?v=mRN_T6JkH-c&ab_channel=FreeMusic)
 
 ## Have fun!
 Remember to **have fun** and **share** your games with the world! 
