@@ -27,7 +27,7 @@
     {
       "id": "1",
       "text": "Our hero says: <span class='speech protagonist'>'Hello, pretty lady!'</span> and she answers <span class='speech woman'>'Goodmorning, sir!'</span>",
-      "narration":"",  "img":"",
+      "narration":"",  "img":"house.jpg",
       "options": [
         {"id": "1", "text": "Node 1 - Option 1", "target": "2", "feedback":"", "sound":"", "time":"5"},
         {"id": "2", "text": "Node 1 - Option 2", "target": "4", "feedback":"", "sound":"", "time":"5"}
