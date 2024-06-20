@@ -365,4 +365,8 @@ hr {
         bottom: 30%;
         left: 43%;
     }
+
+    #home h1, #credits h1 {
+        font-size: 3em;
+    }
 }
