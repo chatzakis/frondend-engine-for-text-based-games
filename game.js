@@ -31,7 +31,9 @@ function handleCheckpointTime(checkpoint, time){
 }
 
 function playAudio(source, element, event) {
-    var $audio = $('<audio>', {
+    const elementClass = element.replace('.', '')
+    var $audio = $(`<audio>`, {
+        class: elementClass,
         src: source,
         preload: 'auto'
     });
@@ -40,7 +42,7 @@ function playAudio(source, element, event) {
 
     $(element).on(event, function () {
         if ($audio[0].canPlayType('audio/mpeg')) {
-            $audio[0].play().catch(function(error) {
+            $audio[0].play().catch(function (error) {
                 console.error('Audio playback failed:', error);
             });
         } else {
@@ -184,6 +186,7 @@ function handleInventoryInterruptions(inventory, index){
 }
 
 async function showFeedback(length, PAUSETIME) {
+    stopNarrationAudio();
     $(".loader-overlay").show();
     $(".time").fadeOut(PAUSETIME / 2);
     if (length == 0){
@@ -195,6 +198,12 @@ async function showFeedback(length, PAUSETIME) {
     }
     $(".time").fadeIn(PAUSETIME / 2);
     $(".loader-overlay").hide();
+}
+
+function stopNarrationAudio() {
+    const audio = document.querySelector("audio.narration"); 
+    audio.pause();
+    audio.currentTime = 0;
 }
 
 function waitNextPress() {
@@ -226,6 +235,7 @@ async function main() {
     time = handleCheckpointTime(CHECKPOINT, time)
 
     playAudio(data.soundtrack,'body','click');
+    playAudio(`./sound/narration/node000.mp3`, '.narration', 'click');
 
     let turns = 0;
     while (true) {
@@ -255,6 +265,7 @@ async function main() {
         }
 
         printOptions(currentNode);
+        $("audio.narration").attr("src", `./sound/narration/${currentNode.narration}`);
         playAudio('./sound/button-hover.wav','.opt-btn','mouseover');
 
         const answer = await getAnswerForOptions();
