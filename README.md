@@ -13,6 +13,7 @@ The player begins from an initial node - state of the game and progresses throug
 All nodes are described in the **'nodes'** property of the JSON file. Each node has an **id** property which sets it apart from the other nodes. 
 The nodes must be in arithmetic order in the JSON file. 
 The **text** property includes the content of the node - the state of the story. It can include HTML code for better readability and functionality.
+The **narration** property sets an audio narration for the current node. The narration is played when the player clicks on the text. 
 The **image** property sets a custom background for the current node. 
 The **options** property describes all the options available from this node.
 At the beginning of the JSON file the **starting** node, the **losing** and **final nodes** must be described as shown below: <br>
@@ -30,7 +31,7 @@ Example:<br>
 {
     "id": "0",
     "text": "Starting Node text",
-    "img":"",
+    "narration:"", "img":"",
     "options": [
       {"id": "1", "text": "Node 0 - Option 1", "target": "1", "feedback":"This option has feedback", "sound":"", "time":"5"},
       {"id": "2", "text": "Node 0 - Option 2", "target": "3", "feedback":"", "sound":"", "time":"5"}
