@@ -8,6 +8,7 @@
     --accent2: DeepSkyBlue;
     --accent-transparent: #1E90FFaa;
     --transparent-black: #1119;
+    --hover-transparent: #2229;
     --light-background: #e5e5e5;
     --light-font: #eee;
     --checkpoint-color: MediumSeaGreen;
@@ -130,6 +131,22 @@ hr {
     width: 100%;
     align-content: center;
     font-size: 2rem;
+}
+
+.node-text:hover {
+    background-color: var(--hover-transparent);
+    transition: background-color 0.3s;
+}
+
+.node-text::before {
+    content: "Click text for narration";
+    color: #888;
+    margin: 0 auto;
+    font-size: 1rem;
+    position: relative;
+    display: block;
+    top:-25px;
+    height: 0px;
 }
 
 .death {
