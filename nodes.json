@@ -17,8 +17,8 @@
   "nodes":[
     {
       "id": "0",
-      "text": "Starting Node text",
-      "img":"",
+      "text": "Starting Node text. This is where your story begins.",
+      "narration":"node000.mp3",  "img":"",
       "options": [
         {"id": "1", "text": "Node 0 - Option 1", "target": "1", "feedback":"This option has feedback", "sound":"", "time":"5"},
         {"id": "2", "text": "Node 0 - Option 2", "target": "3", "feedback":"", "sound":"", "time":"5"}
@@ -27,7 +27,7 @@
     {
       "id": "1",
       "text": "Our hero says: <span class='speech protagonist'>'Hello, pretty lady!'</span> and she answers <span class='speech woman'>'Goodmorning, sir!'</span>",
-      "img":"",
+      "narration":"",  "img":"",
       "options": [
         {"id": "1", "text": "Node 1 - Option 1", "target": "2", "feedback":"", "sound":"", "time":"5"},
         {"id": "2", "text": "Node 1 - Option 2", "target": "4", "feedback":"", "sound":"", "time":"5"}
@@ -36,7 +36,7 @@
     {
       "id": "2",
       "text": "Node 02 text - Ending 1 - Lose",
-      "img":"",
+      "narration":"",  "img":"",
       "options": [
 
       ]
@@ -44,7 +44,7 @@
     {
       "id": "3",
       "text": "Node 02 text",
-      "img":"",
+      "narration":"",  "img":"",
       "options": [
         {"id": "1", "text": "Node 3 - Option 1", "target": "4", "feedback":"", "sound":"", "time":"5"}
       ]
@@ -52,7 +52,7 @@
     {
       "id": "4",
       "text": "Node 02 text - Ending 2 - Win",
-      "img":"",
+      "narration":"",  "img":"",
       "options": [
 
       ]
@@ -60,7 +60,7 @@
     {
       "id": "5",
       "text": "Node 05 text - You came here because you have the key item - check bottom right",
-      "img":"",
+      "narration":"",  "img":"",
       "options": [
         {"id": "1", "text": "Node 5 - Option 1", "target": "4", "feedback":"", "sound":"", "time":"5"}
       ]
