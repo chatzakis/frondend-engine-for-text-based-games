@@ -1,5 +1,6 @@
 { "initialNode":0,
   "soundtrack": "./sound/AdhesiveWombat-Night-Shade.mp3",
+  "defaultBackground": "bg.jpg",
   "pauseTime": 1000,
   "checkpoint": {"node":1, "time":{ "hours": 12, "minutes": 30 }},
   "finalNodes":[2,4],
