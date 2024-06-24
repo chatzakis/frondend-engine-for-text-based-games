@@ -2,6 +2,10 @@
 This is a fun project with the noble cause of creating text-based games on the browser, where user input shapes the story's outcome.
 ## [Play Demo](https://chatzakis.github.io/frondend-engine-for-text-based-games/) 🎮
 
+## Games created
+### [The Haunting Within](https://github.com/chatzakis/the-haunting-within-game/) - [**Play**](https://chatzakis.github.io/the-haunting-within-game/index.html) 
+**MATURE AUDIENCE ONLY**
+
 ## Game structure
 The game is structured using a **directed graph** described using a **JSON file**. To avoid confusion it is crucial to visualize the story.
 ![example-game-graph](https://github.com/chatzakis/frondend-engine-for-text-based-games/assets/122749336/6150aadf-60e3-465d-a23a-5724604dada4)
