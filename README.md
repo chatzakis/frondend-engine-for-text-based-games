@@ -112,7 +112,7 @@ You can change the **name of the game**, the **favicon**, and various messages t
 You can add the names of all those involved in production in the credits file.
 
 ## Running locally
-In case you want to develop your game locally on your computer use the following command to run Chrome to bypass the CORS policy.
+In case you want to develop your game **locally** on your computer use the following commands (for Windows OS) with **Admin rights** to run Chrome to **bypass the CORS policy**.
 ```html
 cd C:\Program Files\Google\Chrome\Application
 chrome.exe C:\Users\myUser\path-to-game\index.html --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp
