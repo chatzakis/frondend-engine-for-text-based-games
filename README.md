@@ -3,7 +3,7 @@ This is a fun project with the noble cause of creating text-based games on the b
 ## [Play Demo](https://chatzakis.github.io/frondend-engine-for-text-based-games/) 🎮
 
 ## Games created
-### [The Haunting Within](https://github.com/chatzakis/the-haunting-within-game/) - [**Play**](https://chatzakis.github.io/the-haunting-within-game/index.html) 
+### [The Haunting Within](https://github.com/chatzakis/the-haunting-within-game/) - [**Play**](https://chatzakis.github.io/the-haunting-within-game/index.html) 👻🏡📙
 **MATURE AUDIENCE ONLY**
 
 ## Game structure
